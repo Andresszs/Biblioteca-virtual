@@ -6,6 +6,7 @@ from app.routers.books.search_by_author import router as search_by_author_router
 from app.routers.books.filter_by_category import router as book_filter_router
 from app.routers.books.book_details import router as book_details_router
 from app.routers.cart.add_to_cart import router as cart_add_router
+from app.routers.cart.remove_from_cart import router as cart_remove_router
 
 
 
@@ -20,6 +21,10 @@ app.include_router(search_by_author_router)     # HU02
 app.include_router(book_filter_router)          # HU03
 app.include_router(book_details_router)         # HU04
 app.include_router(cart_add_router)             # HU05
+app.include_router(cart_remove_router)          # HU06
+
+
+
 
 @app.get("/")
 async def root():
