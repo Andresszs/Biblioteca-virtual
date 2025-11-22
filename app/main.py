@@ -3,6 +3,7 @@ from fastapi.responses import JSONResponse
 from app.routers.books.search_by_title import router as book_search_router
 from app.routers.books.search_by_author import router as search_by_author_router
 from app.routers.books.search_by_author import router as search_by_author_router
+from app.routers.books.filter_by_category import router as book_filter_router
 
 
 app = FastAPI(
@@ -13,6 +14,7 @@ app = FastAPI(
 
 app.include_router(book_search_router)          # HU01
 app.include_router(search_by_author_router)     # HU02
+app.include_router(book_filter_router)
 
 
 
