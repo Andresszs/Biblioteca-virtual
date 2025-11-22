@@ -8,6 +8,7 @@ from app.routers.books.book_details import router as book_details_router
 from app.routers.cart.add_to_cart import router as cart_add_router
 from app.routers.cart.remove_from_cart import router as cart_remove_router
 from app.routers.cart.view_cart import router as cart_view_router
+from app.routers.cart.clear_cart import router as cart_clear_router
 
 
 
@@ -24,6 +25,7 @@ app.include_router(book_details_router)         # HU04
 app.include_router(cart_add_router)             # HU05
 app.include_router(cart_remove_router)          # HU06
 app.include_router(cart_view_router)            # HU07
+app.include_router(cart_clear_router)           # HU08
 
 
 
