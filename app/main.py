@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from app.routers.books.search_by_title import router as book_search_router
+
 
 app = FastAPI(
     title="Mi API con FastAPI",
     description="API RESTful profesional",
     version="1.0.0"
 )
+app.include_router(book_search_router)
 
 @app.get("/")
 async def root():
