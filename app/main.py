@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+
 from app.routers.books.search_by_title import router as book_search_router
 from app.routers.books.search_by_author import router as search_by_author_router
 from app.routers.books.search_by_author import router as search_by_author_router
